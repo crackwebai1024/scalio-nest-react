@@ -36,8 +36,8 @@ const Home: React.FC = () => {
   };
   const onSubmit = (): void => {
     if (ID.length > 0) {
-      // fetch(`http://localhost:3000/posts/${ID}`)
-      fetch(`https://shrouded-garden-65527.herokuapp.com/posts/${ID}`)
+      // fetch(`https://shrouded-garden-65527.herokuapp.com/posts/${ID}`)
+      fetch(`http://localhost:3000/posts/${ID}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.title && data.body) {
