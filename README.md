@@ -42,7 +42,7 @@ $ npm run test
 
 $ npm run test:e2e
 
-### to see the whole project on localhost:3000 port
+# to see the whole project on localhost:3000 port
 
 ### build the frontend
 
@@ -51,3 +51,5 @@ $ npm run test:e2e
 ### run the backend
 
 ### on browser open the new tab with "localhost:3000"
+
+## deployed url https://shrouded-garden-65527.herokuapp.com/
