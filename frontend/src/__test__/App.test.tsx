@@ -4,6 +4,18 @@ import App from "../App";
 import Home from "../pages/Home";
 import Details from "../pages/Details";
 
+jest.mock("react-router", () => ({
+  ...jest.requireActual("react-router"),
+  useLocation: () => ({
+    state: {
+      data: {
+        title: "user post",
+        body: "content",
+      },
+    },
+  }),
+}));
+
 //should render app without fail
 test("should render app", () => {
   render(<App />);
@@ -22,5 +34,10 @@ test("should render Home page", () => {
 
 //unit test for Details page
 test("should render Details page components", () => {
-  render(<Details {match:}/>)
-})
+  render(<Details />);
+  const titleCom = screen.getByText("user post");
+  expect(titleCom).not.toBeNull();
+  expect(screen.getByText("Back to Home"));
+  const inputElem = screen.getByText("content");
+  expect(inputElem);
+});

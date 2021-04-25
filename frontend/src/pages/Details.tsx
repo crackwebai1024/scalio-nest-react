@@ -10,9 +10,9 @@ import PaperWrapper from "../components/PaperWrapper/PaperWrapper";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 import { useHistory, useLocation } from "react-router";
 
-type Props = {
-  match: { params: { id: string } };
-};
+// type Props = {
+//   match: { params: { id: string } };
+// };
 
 type UserData = {
   title?: string;
@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     left: "30px",
   },
 }));
-const Details: React.FC<Props> = (props) => {
+
+const Details: React.FC = () => {
   const classes = useStyles();
   const history = useHistory();
   const location = useLocation<{ data: UserData }>();
